@@ -7,7 +7,8 @@ selo.addEventListener("click", (e) => {
   e.stopPropagation();
   envelope.classList.add("aberto");
 });
-// Cria o container das frases
+
+// Cria o container das frases "Eu te amo"
 const loveContainer = document.createElement('div');
 loveContainer.classList.add('love-container');
 document.body.appendChild(loveContainer);
@@ -17,24 +18,22 @@ function criarLove() {
   love.classList.add('love-text');
   love.textContent = 'Eu te amo';
 
-  // Define posição horizontal aleatória dentro da tela
+  // Posição horizontal aleatória
   love.style.left = Math.random() * 100 + 'vw';
 
-  // Define tamanho aleatório entre 14px e 28px
+  // Tamanho aleatório entre 14px e 28px
   love.style.fontSize = (14 + Math.random() * 14) + 'px';
 
-  // Define duração da queda entre 5 e 12 segundos
+  // Duração da queda entre 5 e 12 segundos
   love.style.animationDuration = (5 + Math.random() * 7) + 's';
 
-  // Adiciona ao container
   loveContainer.appendChild(love);
 
-  // Remove o elemento após a animação terminar (pra não acumular)
+  // Remove após animação para evitar acumulo
   love.addEventListener('animationend', () => {
     love.remove();
   });
 }
 
-// Cria várias frases em intervalos regulares
-setInterval(criarLove, 400); // a cada 400ms cria uma frase nova
-
+// Gera uma nova frase a cada 400ms
+setInterval(criarLove, 400);
