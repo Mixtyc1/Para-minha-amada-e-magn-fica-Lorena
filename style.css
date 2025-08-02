@@ -123,6 +123,43 @@ body {
     opacity: 1;
   }
 }
+/* Container das frases caindo */
+.love-container {
+  pointer-events: none; /* para não interferir nos cliques */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 9999;
+}
+
+/* Estilo de cada "Eu te amo" que cai */
+.love-text {
+  position: absolute;
+  color: #d94f6b;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  user-select: none;
+  opacity: 0.9;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 
 
 
