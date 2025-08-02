@@ -123,9 +123,10 @@ body {
     opacity: 1;
   }
 }
+
 /* Container das frases caindo */
 .love-container {
-  pointer-events: none; /* para não interferir nos cliques */
+  pointer-events: none; /* não interfere em cliques */
   position: fixed;
   top: 0;
   left: 0;
@@ -159,6 +160,7 @@ body {
     opacity: 0;
   }
 }
+
 
 
 
